@@ -12,7 +12,6 @@ class GsUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_("email Address"), max_length=254, unique=True)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
-    is_admin = models.BooleanField(default=False)
     date_created = models.DateTimeField(auto_now_add=True)
     #updated date we use : auto_now = true
     USERNAME_FIELD = 'email'
