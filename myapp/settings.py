@@ -57,13 +57,16 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'myapp.urls'
 
-CORS_ALLOWED_ORIGINS = [
+# CORS_ALLOWED_ORIGINS = [
     
-    "http://localhost:4200",
-    "http://127.0.0.1:4200",
-    "http://127.0.0.1:8080",
-    'http://52.66.103.7'
-]
+#     "http://localhost:4200",
+#     "http://127.0.0.1:4200",
+#     "http://127.0.0.1:8080",
+#     'http://52.66.103.7',
+# ]
+
+
+CORS_ORIGIN_ALLOW_ALL = True   
 
 TEMPLATES = [
     {
