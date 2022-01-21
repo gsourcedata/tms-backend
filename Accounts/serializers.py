@@ -1,5 +1,5 @@
 from rest_framework import serializers
-
+from rest_framework import permissions
 from .models import GsUser
 
 
@@ -9,8 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = GsUser
         fields = '__all__'
-        extra_kwargs = {'password': {'write_only': True}}
-
+        #extra_kwargs = {'password': {'write_only': True}}
     def create(self, validated_data):
         print("validated_data-------------------------------",validated_data )
         user = GsUser(

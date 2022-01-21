@@ -8,3 +8,4 @@ from .serializers import UserSerializer
 class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     queryset = GsUser.objects.all()
+    permission_classes = [permissions.IsAuthenticated]
